@@ -70,7 +70,6 @@ jobs:
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
             echo ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }} >> .env
-            sudo docker-compose pull nikinika/api_yamdb:latest
             docker-compose up -d --build
 
   send_message:
