@@ -59,7 +59,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker-compose stop
-            sudo docker-compose rm web
+            sudo docker-compose rm cyberpunk2077_web_1
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
